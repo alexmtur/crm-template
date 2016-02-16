@@ -1,4 +1,6 @@
-/*This shoul go into a configuration file*/
+/* IMPORT REQUIRED FILES ---------------------------------------------------------------*/
+/* DEFINE VARIABLES --------------------------------------------------------------------*/
+/* PRIMARY CSS STYLES ------------------------------------------------------------------*/
 body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
@@ -20,11 +22,12 @@ h4 {
 
 .jumbotron {
   /*background-color: #6cfdd6;*/
-  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
-  background-image: -o-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
-  background-image: linear-gradient(to right, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: -o-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: linear-gradient(to right, #6cfdd6 0%, #7AF0EE 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FFF1F1F1', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FF7AF0EE', GradientType=1);
+  /*background-image: url("/app/resources/blur_background.svg");*/
   color: #333;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -34,39 +37,66 @@ h4 {
   padding: 60px 50px; }
 
 .navbar {
+  margin-top: 10px;
   margin-bottom: 0;
   /*background-color: #6cfdd6;*/
-  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
-  background-image: -o-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
-  background-image: linear-gradient(to right, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: -o-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: linear-gradient(to right, #6cfdd6 0%, #7AF0EE 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FFF1F1F1', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FF7AF0EE', GradientType=1);
+  /*opacity: 0.4;*/
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
   line-height: 1.42857143 !important;
   letter-spacing: 4px;
   border-radius: 0;
-  font-family: Montserrat, sans-serif; }
+  font-family: Montserrat, sans-serif;
+  border: none !important; }
 
 .navbar li a, .navbar .navbar-brand {
-  cursor: pointer;
-  color: #999 !important; }
+  /*color: #999 !important;*/
+  /*text-decoration: none !important;*/
+  -webkit-transition: all ease 1.7s;
+  -moz-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s; }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
   color: #6cfdd6 !important;
+  text-decoration: none !important;
   background-color: #fff !important; }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #fff !important; }
 
-a.router-link-active {color: white; background-color: #52b9e9; }
+a:visited, a:link {
+  color: #444;
+  text-decoration: none !important; }
 
+a.router-link-active {
+  color: white;
+  background-color: #52b9e9 !important;
+  /*  border-style: solid;
+    border-width: 2px;
+    border-color: $light-color;
+    border-radius: 10px;*/ }
 
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #6cfdd6; }
+
+/*a.router-link-active {color: white; background-color: #52b9e9; }
+ul {list-style-type: none; margin-left: 1em; padding: 0; width: 20em;}
+
+li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
+li:hover {color: #369; background-color: #EEE; left: .2em;} */
+/* route-link anchor tags */
+/*a {padding: 5px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; }*/
+/*a:hover {color: white; background-color: #1171a3 !important; 
+@include ease(.7s); }*/
 
 /*# sourceMappingURL=style.css.map */

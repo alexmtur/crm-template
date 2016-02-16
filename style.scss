@@ -1,12 +1,22 @@
+/* IMPORT REQUIRED FILES ---------------------------------------------------------------*/
 @import 'gradients';
 
-/*This shoul go into a configuration file*/
+/* DEFINE VARIABLES --------------------------------------------------------------------*/
 $primary-font: Lato, sans-serif;
 $heading-font: Montserrat, sans-serif;
 $primary-color: #6cfdd6;
+$secondary-color: #7AF0EE;
 $dark-color: #333;
-$light-color: #f1f1f1;
+$light-color: #ffffff;
 
+@mixin ease($time) {
+  -webkit-transition: all ease $time;
+     -moz-transition: all ease .3s;
+       -o-transition: all ease .3s;
+          transition: all ease .3s;
+}
+
+/* PRIMARY CSS STYLES ------------------------------------------------------------------*/
 body {
   font: 400 15px $primary-font;
   line-height: 1.8;
@@ -28,7 +38,8 @@ h4 {
 }  
 .jumbotron {
   /*background-color: #6cfdd6;*/
-  @include gradient-horizontal($primary-color, $light-color);
+  @include gradient-horizontal($primary-color, $secondary-color);
+  /*background-image: url("/app/resources/blur_background.svg");*/
   color: #333;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -38,9 +49,11 @@ h4 {
   padding: 60px 50px;
 }
 .navbar {
+  margin-top: 10px;
   margin-bottom: 0;
   /*background-color: #6cfdd6;*/
-  @include gradient-horizontal($primary-color, $light-color);
+  @include gradient-horizontal($primary-color, $secondary-color);
+  /*opacity: 0.4;*/
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
@@ -48,20 +61,47 @@ h4 {
   letter-spacing: 4px;
   border-radius: 0;
   font-family: $heading-font;
+  border: none !important;
 }
 .navbar li a, .navbar .navbar-brand {
-  color: #999 !important;
+  /*color: #999 !important;*/
+  /*text-decoration: none !important;*/
+  @include ease(1.7s);
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
   color: #6cfdd6 !important;
+  text-decoration: none !important;  
   background-color: #fff !important;
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #fff !important;
 }
+a:visited, a:link {color: #444; text-decoration:none !important;}
+
+a.router-link-active {
+  color: white; 
+  background-color: #52b9e9 !important; 
+/*  border-style: solid;
+  border-width: 2px;
+  border-color: $light-color;
+  border-radius: 10px;*/
+}
+
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #6cfdd6;
 }
+
+/*a.router-link-active {color: white; background-color: #52b9e9; }
+ul {list-style-type: none; margin-left: 1em; padding: 0; width: 20em;}
+
+li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
+li:hover {color: #369; background-color: #EEE; left: .2em;} */
+
+/* route-link anchor tags */
+ /*a {padding: 5px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; }*/
+
+/*a:hover {color: white; background-color: #1171a3 !important; 
+@include ease(.7s); }*/
