@@ -1,0 +1,72 @@
+/*This shoul go into a configuration file*/
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181; }
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px; }
+
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px; }
+
+.jumbotron {
+  /*background-color: #6cfdd6;*/
+  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: -o-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: linear-gradient(to right, #6cfdd6 0%, #f1f1f1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FFF1F1F1', GradientType=1);
+  color: #333;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-family: Montserrat, sans-serif; }
+
+.container-fluid {
+  padding: 60px 50px; }
+
+.navbar {
+  margin-bottom: 0;
+  /*background-color: #6cfdd6;*/
+  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: -o-linear-gradient(left, #6cfdd6 0%, #f1f1f1 100%);
+  background-image: linear-gradient(to right, #6cfdd6 0%, #f1f1f1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FFF1F1F1', GradientType=1);
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif; }
+
+.navbar li a, .navbar .navbar-brand {
+  cursor: pointer;
+  color: #999 !important; }
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #6cfdd6 !important;
+  background-color: #fff !important; }
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important; }
+
+a.router-link-active {color: white; background-color: #52b9e9; }
+
+
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #6cfdd6; }
+
+/*# sourceMappingURL=style.css.map */
