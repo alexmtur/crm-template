@@ -1,0 +1,67 @@
+@import 'gradients';
+
+/*This shoul go into a configuration file*/
+$primary-font: Lato, sans-serif;
+$heading-font: Montserrat, sans-serif;
+$primary-color: #6cfdd6;
+$dark-color: #333;
+$light-color: #f1f1f1;
+
+body {
+  font: 400 15px $primary-font;
+  line-height: 1.8;
+  color: #818181;
+}
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
+}  
+.jumbotron {
+  /*background-color: #6cfdd6;*/
+  @include gradient-horizontal($primary-color, $light-color);
+  color: #333;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-family: $heading-font;
+}
+.container-fluid {
+  padding: 60px 50px;
+}
+.navbar {
+  margin-bottom: 0;
+  /*background-color: #6cfdd6;*/
+  @include gradient-horizontal($primary-color, $light-color);
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: $heading-font;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #999 !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #6cfdd6 !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #6cfdd6;
+}
