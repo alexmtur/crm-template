@@ -22,13 +22,14 @@ h4 {
 
 .jumbotron {
   /*background-color: #6cfdd6;*/
-  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
-  background-image: -o-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
-  background-image: linear-gradient(to right, #6cfdd6 0%, #7AF0EE 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FF7AF0EE', GradientType=1);
+  /*@include gradient-horizontal($primary-color, $secondary-color);*/
   /*background-image: url("/app/resources/blur_background.svg");*/
-  color: #333;
+  background-image: -webkit-linear-gradient(left, #0F1621 0%, #10231D 100%);
+  background-image: -o-linear-gradient(left, #0F1621 0%, #10231D 100%);
+  background-image: linear-gradient(to right, #0F1621 0%, #10231D 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F1621', endColorstr='#FF10231D', GradientType=1);
+  color: #ffffff;
   padding-top: 70px;
   padding-bottom: 30px;
   font-family: Montserrat, sans-serif; }
@@ -37,14 +38,15 @@ h4 {
   padding: 60px 50px; }
 
 .navbar {
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 0;
   /*background-color: #6cfdd6;*/
-  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
-  background-image: -o-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
-  background-image: linear-gradient(to right, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: -webkit-linear-gradient(left, #0F1621 0%, #10231D 100%);
+  background-image: -o-linear-gradient(left, #0F1621 0%, #10231D 100%);
+  background-image: linear-gradient(to right, #0F1621 0%, #10231D 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FF7AF0EE', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F1621', endColorstr='#FF10231D', GradientType=1);
   /*opacity: 0.4;*/
   z-index: 9999;
   border: 0;
@@ -56,29 +58,37 @@ h4 {
   border: none !important; }
 
 .navbar li a, .navbar .navbar-brand {
-  /*color: #999 !important;*/
+  color: #ffffff !important;
   /*text-decoration: none !important;*/
-  -webkit-transition: all ease 1.7s;
-  -moz-transition: all ease .3s;
-  -o-transition: all ease .3s;
-  transition: all ease .3s; }
+  /*@include ease(2.7s);*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: 10px; }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #6cfdd6 !important;
-  text-decoration: none !important;
-  background-color: #fff !important; }
+  /*color: $light-color !important;*/
+  /*text-decoration: none !important;  */
+  /*background-color: $secondary-color !important;*/
+  background-image: -webkit-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: -o-linear-gradient(left, #6cfdd6 0%, #7AF0EE 100%);
+  background-image: linear-gradient(to right, #6cfdd6 0%, #7AF0EE 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6CFDD6', endColorstr='#FF7AF0EE', GradientType=1); }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  color: #fff !important; }
+  /*color: #fff !important;*/ }
 
 a:visited, a:link {
-  color: #444;
   text-decoration: none !important; }
 
 a.router-link-active {
-  color: white;
-  background-color: #52b9e9 !important;
+  /*color: white; */
+  /*background-color: $secondary-color !important; */
+  border-style: solid;
+  border-width: 2px;
+  border-color: #6cfdd6;
   /*  border-style: solid;
     border-width: 2px;
     border-color: $light-color;
