@@ -48,8 +48,16 @@ body {
   color: $semi-dark-color;
   background-color: $semi-light-color !important;
 }
+/*@media (max-width: @screen-xs) {
+    body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+    body{font-size: 14px;}
+}*/
 h1 {
   font-size: 5em !important;
+  /*font-size: 3.5vw !important;*/
   font-weight: 700 !important;
   text-transform: uppercase;
   color: $dark-color !important;
@@ -57,10 +65,12 @@ h1 {
 }
 h2 {
   font-size: 5em !important;
+  /*font-size: 3.5vw !important;*/
   font-weight: 400 !important;
   text-transform: uppercase;
   color: $primary-color !important;
   padding-bottom: 30px;
+  padding: 0;
 }
 /*h4 {
   font-size: 19px;
@@ -76,12 +86,19 @@ h2 {
   padding: 0 !important;
   margin: 0 !important;
 }
+.no-space-vertical {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 .no-margin {
   margin: 0 !important;
 }
 .vspace {
   margin-top: 50px !important;
 }
+
 .jumbotron {
   /*background-image: url("/app/resources/blur_background.svg");*/
   /*@include gradient-horizontal($primary-color-contrast, $secondary-color-contrast);*/
@@ -137,21 +154,31 @@ a.router-link-active {
   @include inset-border($primary-color, 2px)
 }
 
+.card {
+  background: $light-color;
+  /*@include gradient-horizontal($primary-color, $secondary-color);*/
+}
+
 /*.impact-icon {
   color: $light-color !important;
 }*/
 
-footer .fa {
-  font-size: 25px;
-  /*margin-bottom: 20px;*/
-  /*color: #6cfdd6;*/
-  
-}
-
 footer {
   background-color: $light-color;
+  font-size: 1.4em;
+  color: $semi-dark-color;
 }
 
+.social-buttons, .social-buttons li a:visited {
+  font-size: 1.8em;
+  color: $dark-color;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  @include ease(1s);
+}
+.social-buttons li a:hover {
+  color: $primary-color;
+}
 /* HOVER EFFECTS ---------------------------------------------------------------------*/
 .hovereffect {
   width: 100%;
