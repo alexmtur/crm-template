@@ -8,12 +8,13 @@ $navbar-font: Montserrat, sans-serif;
 
 $primary-color: #36F9C1;
 $secondary-color: #7AF0EE;
-$primary-color-contrast: #1e3c72;
-$secondary-color-contrast: #2a5298;
+$primary-color-contrast: #16222A;
+$secondary-color-contrast: #3A6073;
 
 $dark-color: #444444;
 $semi-dark-color: #666666;
 $light-color: #ffffff;
+$semi-light-color: #f1f1f1;
 
 @mixin ease($time) {
   -webkit-transition: all ease-in-out $time;
@@ -42,15 +43,23 @@ $light-color: #ffffff;
 
 /* PRIMARY CSS STYLES ------------------------------------------------------------------*/
 body {
-  font: 300 15px $primary-font !important;
+  font: 300 100% $primary-font !important;
   line-height: 1.8;
   color: $semi-dark-color;
+  background-color: $semi-light-color !important;
 }
-h2 {
-  font-size: 24px;
+h1 {
+  font-size: 5em !important;
   font-weight: 700 !important;
   text-transform: uppercase;
   color: $dark-color !important;
+  padding: 0;
+}
+h2 {
+  font-size: 5em !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  color: $primary-color !important;
   padding-bottom: 30px;
 }
 /*h4 {
@@ -60,10 +69,25 @@ h2 {
   font-weight: 400;
   margin-bottom: 30px;
 }*/  
+.no-padding {
+  padding: 0 !important;
+}
+.no-space {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.vspace {
+  margin-top: 50px !important;
+}
 .jumbotron {
   /*background-image: url("/app/resources/blur_background.svg");*/
-  @include gradient-horizontal($primary-color-contrast, $secondary-color-contrast);
-  color: $light-color;
+  /*@include gradient-horizontal($primary-color-contrast, $secondary-color-contrast);*/
+
+  background-color: $light-color !important;
+  color: $dark-color;
   padding-top: 70px;
   padding-bottom: 30px;
   font-family: $primary-font;
@@ -75,7 +99,10 @@ h2 {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 0;
-  @include gradient-horizontal($primary-color-contrast, $secondary-color-contrast);
+  /*@include gradient-horizontal($primary-color-contrast, $secondary-color-contrast);*/
+  /*background-color: rgba(255,255,255,0.6);*/
+  /*background: none !important;*/
+  background: rgba(255,255,255,0.9) !important;
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
@@ -83,14 +110,15 @@ h2 {
   letter-spacing: 4px;
   border-radius: 0;
   font-family: $navbar-font;
+  text-transform: uppercase;
   border: none !important;
 }
 .navbar li a, .navbar .navbar-brand {
-  color: $light-color !important;
+  color: $semi-dark-color !important;
   /*text-decoration: none !important;*/
   /*@include ease(2.7s);*/
   @include rounded-corners(10);
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
   /*color: $light-color !important;*/
@@ -113,10 +141,15 @@ a.router-link-active {
   color: $light-color !important;
 }*/
 
-footer .glyphicon {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #6cfdd6;
+footer .fa {
+  font-size: 25px;
+  /*margin-bottom: 20px;*/
+  /*color: #6cfdd6;*/
+  
+}
+
+footer {
+  background-color: $light-color;
 }
 
 /* HOVER EFFECTS ---------------------------------------------------------------------*/
